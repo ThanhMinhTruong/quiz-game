@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video class="background-video" autoplay muted loop playsinline>
+        <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="screen active" id="start-screen">
+            <h1>Quiz Game</h1>
+            <p>Test your knowledge with our fun quiz game! Click the button below to start playing.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+        <div class="screen" id="quiz-screen">
+            <div class="quiz header">
+                <h2 id="question-text">Quiz Question</h2>
+                <div class="quiz-info">
+                    Question <span id="question-number">1</span> of <span id="total-questions">5</span>
+                    <p>Score: <span id="score">0</span></p>
+                </div>
+                <div class="options">
+                    <button class="option-btn" id="option1">Option 1</button>
+                    <button class="option-btn" id="option2">Option 2</button>
+                    <button class="option-btn" id="option3">Option 3</button>
+                    <button class="option-btn" id="option4">Option 4</button>
+                </div>
+                <div id="answer-container" class="answer-container"></div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        <div class="screen" id="result-screen">
+            <h2>Quiz Completed!</h2>
+            <p>Your final score is: <span id="final-score">0</span> out of <span id="max-score">5</span></p>
+            <p id="result-message"></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
